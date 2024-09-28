@@ -1,4 +1,4 @@
-package org.misis.tp.ttf;
+package org.misis.tp.ttf.lab2;
 
 public class Main {
 
