@@ -4,9 +4,9 @@ project(lab3)
 
 add_subdirectory(lib)
 
-add_executable(Main main.cpp)
+add_executable(main main.cpp)
 
-target_link_libraries(Main 
+target_link_libraries(main 
                         PRIVATE SingleLib 
                         PRIVATE HunterTypes
                         PRIVATE HunterUtils
