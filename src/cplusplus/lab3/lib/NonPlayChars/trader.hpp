@@ -6,9 +6,9 @@ class ITrader {
 protected:
     unsigned int wealth;
 public:
-    ITrader(const unsigned int& wealth);
+    ITrader(const unsigned int wealth);
 
-    virtual void tradeGoods(const int& goods_number)=0;
+    virtual void tradeGoods(const int goods_number)=0;
     virtual ~ITrader() {};
 };
 
@@ -16,11 +16,11 @@ public:
 class TownTrader : public ITrader {
 public:
     using ITrader::ITrader;
-    void tradeGoods(const int& goods_number) override;
+    void tradeGoods(const int goods_number) override;
 };
 
 class SwampTrader : public ITrader {
 public:
     using ITrader::ITrader;
-    void tradeGoods(const int& goods_number) override;
+    void tradeGoods(const int goods_number) override;
 };

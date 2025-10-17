@@ -1,12 +1,12 @@
 #include "hunter.hpp"
 
 
-IHunter::IHunter(const int& vitality,
-            const int& endurance,
-            const int& strength,
-            const int& skill,
-            const int& blood,
-            const int& arcane)
+IHunter::IHunter(const int vitality,
+            const int endurance,
+            const int strength,
+            const int skill,
+            const int blood,
+            const int arcane)
                 : vitality{vitality}, 
                     endurance{endurance},
                     strength{strength},

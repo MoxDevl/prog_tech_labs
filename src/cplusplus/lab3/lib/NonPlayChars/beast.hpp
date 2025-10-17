@@ -5,7 +5,7 @@ class IBeast {
 protected:
     int level;
 public:
-    IBeast(const unsigned int& level);
+    IBeast(const unsigned int level);
 
     virtual void attack()=0;
     virtual ~IBeast() {};

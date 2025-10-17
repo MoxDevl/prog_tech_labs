@@ -12,12 +12,12 @@ class IHunter {
             arcane;
     public:
         IHunter() = default;
-        IHunter(const int& vitality,
-            const int& endurance,
-            const int& strength,
-            const int& skill,
-            const int& blood,
-            const int& arcane);
+        IHunter(const int vitality,
+            const int endurance,
+            const int strength,
+            const int skill,
+            const int blood,
+            const int arcane);
         void printStats() const;
     
         virtual void attack()=0;
