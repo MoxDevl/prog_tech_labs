@@ -8,5 +8,5 @@ void MadKnight::setLevel(const unsigned int nlevel) {
 }
 
 void MadKnight::slay() {
-    printf("Pierces you with a speak for %d damage\n", level);
+    printf("Pierces you with a spear for %d damage\n", level);
 }
