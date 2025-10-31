@@ -21,6 +21,7 @@ public:
 
 class ProfileDB : public IProfileDB {
 protected:
+    int waiting_time_sec = 2;
     std::map<std::string, Profile> profile_table = {};
     // virtual std::map<std::string, Profile> get_table() override;
 
