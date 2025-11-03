@@ -1,24 +1,25 @@
 #include "garments.hpp"
 
-std::string LightGarments::type() const {
-    return garments_type;
+Garments::~Garments() {}
+
+std::string Garments::type() const {
+    return _type;
 }
-double LightGarments::defense() const {
+double Garments::defense() const {
     return _defense;
 }
-
-double LightGarments::speed() const {
+double Garments::speed() const {
     return _speed;
 }
 
-
-std::string DenseGarments::type() const {
-    return garments_type;
-}
-double DenseGarments::defense() const {
-    return _defense;
+LightGarments::LightGarments() {
+    _defense=0.1;
+    _speed=10;
+    _type = "light garments";
 }
 
-double DenseGarments::speed() const {
-    return _speed;
+DenseGarments::DenseGarments() {
+    _defense=0.5;
+    _speed=7;
+    _type = "dense garments";
 }
