@@ -6,49 +6,33 @@ double Weapon::damage_mult() const {
 }
 
 std::string Weapon::type() const {
-    return weapon_type;
+    return this->weapon_type;
 }
 
+Weapon::~Weapon() {}
 
 
-double BareHands::damage_mult() const {
-    return damage_multiplier;
+BareHands::BareHands() {
+    damage_multiplier=0.5;
+    weapon_type="knuckles";
 }
 
-std::string BareHands::type() const {
-    return weapon_type;
+Blunderbuss::Blunderbuss() {
+    damage_multiplier=2.;
+    weapon_type="a blunderbuss";
 }
 
-double Blunderbass::damage_mult() const {
-    return damage_multiplier;
+Tentacle::Tentacle() {
+    damage_multiplier = 3.;
+    weapon_type="tentacles";
 }
 
-std::string Blunderbass::type() const {
-    return weapon_type;
+Dagger::Dagger() {
+    damage_multiplier=1.5;
+    weapon_type="a dagger";
 }
 
-double Tentacle::damage_mult() const {
-    return damage_multiplier;
-}
-
-std::string Tentacle::type() const {
-    return weapon_type;
-}
-
-
-double Dagger::damage_mult() const {
-    return damage_multiplier;
-}
-
-std::string Dagger::type() const {
-    return weapon_type;
-}
-
-
-double Claymore::damage_mult() const {
-    return damage_multiplier;
-}
-
-std::string Claymore::type() const {
-    return weapon_type;
+Claymore::Claymore() {
+    damage_multiplier=2.5;
+    weapon_type="a claymore";
 }

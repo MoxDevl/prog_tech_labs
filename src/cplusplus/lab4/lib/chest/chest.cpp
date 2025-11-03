@@ -5,8 +5,8 @@ EquipmentChest::EquipmentChest() {
     ChestedGarmentsLoot rand_garment = static_cast<ChestedGarmentsLoot>(std::rand() % OptGarmentsLast);
 
     switch (rand_weapon) {
-        case OptBlunderbass:
-            chested_weapon=std::move(std::unique_ptr<Weapon>(new Blunderbass));
+        case OptBlunderbuss:
+            chested_weapon=std::move(std::unique_ptr<Weapon>(new Blunderbuss));
             break;
         case OptTentacle:
             chested_weapon=std::move(std::unique_ptr<Weapon>(new Tentacle));

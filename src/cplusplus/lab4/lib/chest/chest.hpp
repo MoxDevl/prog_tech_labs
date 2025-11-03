@@ -9,7 +9,7 @@
 class EquipmentChest {
 protected:
     enum ChestedWeaponLoot {
-        OptBlunderbass,
+        OptBlunderbuss,
         OptTentacle,
         OptDagger,
         OptClaymore,

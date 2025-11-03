@@ -4,64 +4,38 @@
 class Weapon {
 protected:
     double damage_multiplier=1.;
-    std::string weapon_type="bleh";
+    std::string weapon_type;
 public:
-    Weapon() {};
-
     virtual double damage_mult() const;
     virtual std::string type() const;
-    virtual ~Weapon() {};
+    // pure virtual so that Weapon becomes an abstract class
+    virtual ~Weapon()=0;
     
     friend class IHunter;
 };
 
 
 class BareHands : public Weapon {
-protected:
-    double damage_multiplier = 0.5;
-    std::string weapon_type = "knuckles";
 public:
-    using Weapon::Weapon;
-    double damage_mult() const override;
-    std::string type() const override;
+    BareHands();
 };
 
-class Blunderbass : public Weapon {
-protected:
-    double damage_multiplier = 2.;
-    std::string weapon_type = "a blunderbass";
+class Blunderbuss : public Weapon {
 public:
-    using Weapon::Weapon;
-    double damage_mult() const override;
-    std::string type() const override;
+    Blunderbuss();
 };
 
 class Tentacle : public Weapon {
-protected:
-    double damage_multiplier = 3.;
-    std::string weapon_type = "tentacles";
 public:
-    using Weapon::Weapon;
-    double damage_mult() const override;
-    std::string type() const override;
+    Tentacle();
 };
 
 class Dagger : public Weapon {
-protected:
-    double damage_multiplier = 1.5;
-    std::string weapon_type = "a dagger";
 public:
-    using Weapon::Weapon;
-    double damage_mult() const override;
-    std::string type() const override;
+    Dagger();
 };
 
 class Claymore : public Weapon {
-protected:
-    double damage_multiplier = 2.5;
-    std::string weapon_type = "a claymore";
 public:
-    using Weapon::Weapon;
-    double damage_mult() const override;
-    std::string type() const override;
+    Claymore();
 };
