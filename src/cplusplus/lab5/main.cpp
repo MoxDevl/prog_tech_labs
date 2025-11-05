@@ -1,6 +1,7 @@
 #include "hunter.hpp"
 #include "weapon.hpp"
 #include "fight_manager.hpp"
+#include "companion.hpp"
 #include <memory>
 #include <vector>
 
@@ -27,7 +28,7 @@ int main() {
         std::shared_ptr<FightMember>{new FightMember(nicola, briar_brother)}
     };
 
-    printf("### **Observer demonstration**\n");
+    printf("### **Observer pattern demonstration**\n");
     FightManager first_fight;
     for (std::shared_ptr<FightMember> m : mems) 
         first_fight.subscribe(m);
@@ -39,5 +40,17 @@ int main() {
     for (std::shared_ptr<Profile> p : profiles)
         std::cout << p->score() << "\n";
     
+    
+    printf("### **Strategy pattern demonstration**\n");
+
+    Companion 
+        elize(
+            "Elize",
+            std::shared_ptr<CompanionStrat>{new HealerCompanionStrat}
+        ),
+        gascoine("Gascoine");
+
+    elize.action();
+    gascoine.action();
     return 0;
 }

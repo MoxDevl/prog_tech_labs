@@ -10,4 +10,5 @@ target_link_libraries(main
     PRIVATE HunterLib
     PRIVATE ProfileLib
     PRIVATE FightManagerLib
+    PRIVATE CompanionLib
 )
