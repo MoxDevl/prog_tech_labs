@@ -2,6 +2,7 @@
 #include "weapon.hpp"
 #include "fight_manager.hpp"
 #include "companion.hpp"
+#include "damage_link.hpp"
 #include <memory>
 #include <vector>
 
@@ -28,7 +29,7 @@ int main() {
         std::shared_ptr<FightMember>{new FightMember(nicola, briar_brother)}
     };
 
-    printf("### **Observer pattern demonstration**\n");
+    printf("## **Observer pattern demonstration**\n");
     FightManager first_fight;
     for (std::shared_ptr<FightMember> m : mems) 
         first_fight.subscribe(m);
@@ -41,7 +42,7 @@ int main() {
         std::cout << p->score() << "\n";
     
     
-    printf("### **Strategy pattern demonstration**\n");
+    printf("## **Strategy pattern demonstration**\n");
 
     Companion 
         elize(
@@ -52,5 +53,18 @@ int main() {
 
     elize.action();
     gascoine.action();
+    
+    
+    printf("## **Chain of responsibility pattern demonstration**\n");
+    
+    std::shared_ptr<DamageLink> damage{new StatusEffect(2, 10)};
+    
+    damage->set_next(
+        std::shared_ptr<DamageLink>{new DamageBuff(3)}
+    )->set_next(
+        std::shared_ptr<DamageLink>{new IncomingDamage(20)}
+    );
+    
+    damage->inflict();
     return 0;
 }
